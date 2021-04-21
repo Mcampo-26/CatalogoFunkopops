@@ -21,13 +21,15 @@
             <span class="navbar-toggler-icon"></span>
           </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">Inicio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="admin.html">Administracion</a>
+                            <a class="nav-link " aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Contacto</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="admin.html">Admin</a>
                         </li>
                     </ul>
                 </div>
@@ -35,17 +37,28 @@
         </nav>
     </header>
     <main class="container">
-        <section>
+        <section class="my-5 row">
             <!-- completar el maquetado de esta seccion -->
-            <h1>Administrar Funkopop</h1>
+            <div class="col-10">
+                <h2 class="display-4">Administrar Productos</h2>
+
+            </div>
+            <div class="col-2">
+                <img class="batman" src="img/batmanAdmin.jpg" alt="batman">
+            </div>
+            </div>
+
+            <hr>
         </section>
-        <section>
-            <div class="row">
-                <div class="col-9">
-                    <h3>Tabla de Funkopop</h3>
+        <section class="container">
+            <div class="row text-center my-5">
+                <div class="col-10">
+
+                    <h3><b>Tabla de Productos </b> </h3>
+
                 </div>
-                <div class="col-1">
-                    <button class="btn btn-primary" id="btnAgregar" data-bs-toggle="modal" data-bs-target="#modalProducto">Agregar</button>
+                <div class="col-2 text-start">
+                    <button class="btn border border-primary text-primary" id="btnAgregar" data-bs-toggle="modal" data-bs-target="#modalProducto">Agregar</button>
                 </div>
             </div>
             <div class="table-responsive">
@@ -88,7 +101,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="formFunkopop">
+                    <form id="formFunkopop" onsubmit="agregarFunkopop(event)">
                         <div class="mb-3">
                             <label class="form-label">Codigo</label>
                             <input type="text" id="codigo" class="form-control" placeholder="1" />
@@ -120,7 +133,10 @@
         </div>
     </div>
 
-    <footer></footer>
+    <footer>
+        <section class="bg-dark text-center text-light py-4 ">
+            <h6>Todos los derechos reservados</h6>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script type="module" src="js/admin.js"></script>
 </body>
