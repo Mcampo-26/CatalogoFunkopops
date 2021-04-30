@@ -15,11 +15,11 @@ btnAgregar.addEventListener("click", () => {
     // buscar los datos del local storage
 leerDatos();
 
-window.agregarFunkopop = function(event) {
-    //el objetico de esta funcin es agegar un funkopop nuevo en local storage
-    event.preventDefault();
-    console.log("estamos dentro de la funcion funkopop")
-        // traer los valores del formulario que ya estan validados
+function agregarFunkopop() {
+    //el objetico de esta funcion es agegar un funkopop nuevo en local storage
+
+    console.log("estamos dentro de la funcion funkopop");
+    // traer los valores del formulario que ya estan validados
 
     let codigo = document.getElementById("codigo").value;
     let nombre = document.getElementById("nombre").value;
@@ -144,6 +144,19 @@ window.preparDatosFunko = function(boton) {
     document.getElementById('categoria').value = funkoEncontrado.categoria;
     document.getElementById('descripcion').value = funkoEncontrado.descripcion;
     document.getElementById('imagen').value = funkoEncontrado.imagen;
+    // quiero moificar mi Funkopop
+    modificarFunko = true;
+    limpiarFormulario();
     modalFunko.show();
-
 }
+window.guardarDatos = function(event) {
+    event.preventDefault();
+    console.log("desde la funcion guardar datos")
+    if (modificarFunko === true) {
+        //mofidicar un funkopop existente
+    } else {
+        //agregar un nuevo Funko
+        agregarFunkopop();
+    }
+
+};
