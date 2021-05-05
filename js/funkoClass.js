@@ -3,6 +3,7 @@ export class Funko {
         this.codigo = codigoP;
         this.nombre = nombreP;
         this.numSerie = numSerieP;
+        this.categoria = categoriaP;
         this.descripcion = descripcionP;
         this.imagen = imagenP;
 
